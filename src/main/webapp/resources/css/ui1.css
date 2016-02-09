@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 30, 2016, 3:35:24 PM
+    Author     : mamadu
+*/
+/*increasing radio button size*/
+    #radio-group > input[type=radio] {
+    border: 0px;
+    width: 2em;
+    height: 2em;
+}
+
+.selectOneRadioClass{
+  background-color: pink;
+}
+
+/*instead of using disabled class and enabled class to style label of input we can use css only*/
+/*input[type=radio] ~ label {
+    background-color: blue;
+    
+}*/
