@@ -23,3 +23,20 @@ and open the template in the editor.
     background-color: blue;
     
 }*/
+
+
+div dt {
+    display: block;
+    background: -webkit-linear-gradient(top, #f7e0a2, #d1b875);
+    border-color: #a98f47;
+}
+div dl {
+    display: block;
+}
+div dd {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+ border: 1px solid #cccccc;
+  margin: 0; /* important catch: this will bring  dd to left as dds are normall/ padded right */
+}

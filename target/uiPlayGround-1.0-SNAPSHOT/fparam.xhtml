@@ -5,18 +5,37 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="ui1.css" />
     </h:head>
     <h:body>
 
-        <h:outputFormat value="Hello,{0}. You are from {1}.">
-            <f:param value="JSF User" />
-            <f:param value="China" />
-        </h:outputFormat>
+        <div>
+            <dl>
+                <dt>Pass Value from f:param child to h:outputFormat parent</dt>
+                <dd>
+                    <h:outputFormat value="Hello,{0}. You are from {1}.">
+                        <f:param value="JSF User" />
+                        <f:param value="China" />
+                    </h:outputFormat>
+                </dd>
+            </dl>
+            <dl>
+                <dt>2 </dt>
+                <dd>
+                    <div id="slideToggle1" class="panel1">Click to slide down panel</div>
+                    <div id="slideToggle2" class="panel2">Hello world!</div>
+                </dd>
+            </dl>
+
+        </div>     
 
 
 
 
-<!--//TODO MOVE THIS TO ANOTHER page req-params.xhtml and continue fparam with various other components-->
+
+
+
+        <!--//TODO MOVE THIS TO ANOTHER page req-params.xhtml and continue fparam with various other components-->
         <f:view>
             <h:form id="indexForm">
                 <!-- 1a) bind a UIComponent to the request map as "foo" -->
@@ -32,27 +51,27 @@
 
         <!-- 1b) read value from a UIComponent that implements ValueHolder so that you get the value by .value -->
         #{requestScope.foo.value} <br/>
-        
+
         <!-- 2a) read value directly from the request scope -->
         #{requestScope.userName} <br/>
-        
+
         #{requestScope["userName"]} <br/>
-        
-        
-         #{param['indexForm:input2']}  <br/>
-         
+
+
+        #{param['indexForm:input2']}  <br/>
+
         <h:outputText value="#{request.getParameter('indexForm:input2')}" /> <br/>
-        ///
-   
-
-       
-        
-        
-  
 
 
-<!--you can use f:viewParam to set the parameter from an xhtml page to its backingBean-->
-<!--<f:viewParam name="id" value="#{blog.entryId}"/>-->
+
+
+
+
+
+
+
+        <!--you can use f:viewParam to set the parameter from an xhtml page to its backingBean-->
+        <!--<f:viewParam name="id" value="#{blog.entryId}"/>-->
 
     </h:body>
 </html>
