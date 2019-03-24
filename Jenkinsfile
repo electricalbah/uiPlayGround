@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile {
+      filename 'payara/Dockerfile.txt'
+    }
+
+  }
   stages {
     stage('my-stage-1') {
       steps {
