@@ -1,7 +1,7 @@
 pipeline {
   agent {
     dockerfile {
-      filename 'payara/Dockerfile.txt'
+      filename 'Dockerfile.txt'
     }
 
   }
