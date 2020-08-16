@@ -20,7 +20,7 @@
                 </dd>
             </dl>
             <dl>
-                <dt>2 </dt>
+                <dt>2. Sliding Panel </dt>
                 <dd>
                     <div id="slideToggle1" class="panel1">Click to slide down panel</div>
                     <div id="slideToggle2" class="panel2">Hello world!</div>
@@ -28,11 +28,6 @@
             </dl>
 
         </div>     
-
-
-
-
-
 
 
         <!--//TODO MOVE THIS TO ANOTHER page req-params.xhtml and continue fparam with various other components-->
@@ -44,7 +39,7 @@
                 <!-- 2a) bind a value directly to the request map as "foo" -->
                 <h:inputText id ="input2" value="#{requestScope.userName}" />
 
-                <h:commandButton action = "#"> next </h:commandButton>
+                 <h:commandButton action = "#" value = "Next"  /> 
 
             </h:form>
         </f:view>
@@ -61,12 +56,6 @@
         #{param['indexForm:input2']}  <br/>
 
         <h:outputText value="#{request.getParameter('indexForm:input2')}" /> <br/>
-
-
-
-
-
-
 
 
 
