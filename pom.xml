@@ -39,11 +39,8 @@
         <url>https://github.com/electricalbah/uiPlayGround/tree/master/target/</url>
     </snapshotRepository>
 </distributionManagement>-->
-  
-  
-  
-  
 
+ 
     <build>
         <plugins>
             <plugin>
@@ -103,19 +100,7 @@
         <phase>install</phase>
         </execution>
     </executions>
-    <configuration>
-        <executable>${local.glassfish.home}\bin\asadmin.bat</executable>
-        <arguments>
-            <argument>deploy</argument>
-            <argument>--host=localhost</argument>
-            <argument>--port=4848</argument>
-            
-<!--       DESIRED OUTCOME: target/uiPlayGround-1.0-SNAPSHOT.war-->
-<!--        <argument>target/uiPlayGround-1.0-SNAPSHOT.war</argument>-->           <!-- manually getting the output war file name with SNAPSHOT version-->
-<!--        <argument>target/${project.name}-${project.version}.war</argument>-->  <!--append project an eand version together-->
-            <argument>target/${project.build.finalName}.war</argument>             <!-- automatically getting the output war file name with SNAPSHOT version-->
-            
-        </arguments>
+   <configuration>
     </configuration>
  </plugin>
         </plugins>
