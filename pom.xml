@@ -88,22 +88,33 @@
                     </execution>
                 </executions>
             </plugin>
-             <plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>exec-maven-plugin</artifactId>
-      <version>1.0</version>
-    <executions>
-        <execution>
-        <goals>
-              <goal>exec</goal>
-        </goals>
-        <phase>install</phase>
-        </execution>
-    </executions>
-   <configuration>
-    </configuration>
- </plugin>
-        </plugins>
+            <!-- <plugin>
+               <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                  <version>1.0</version>
+                <executions>
+                    <execution>
+                    <goals>
+                          <goal>exec</goal>
+                    </goals>
+                    <phase>install</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>${local.glassfish.home}\bin\asadmin.bat</executable>
+                    <arguments>
+                        <argument>deploy</argument>
+                        <argument> -host=localhost</argument> TODO: host in left must be double hyphen
+                        <argument> -port=4848</argument>  TODO: port in left must be double hyphen
+
+                     <argument>target/uiPlayGround-1.0-SNAPSHOT.war</argument> -->         <!-- manually getting the output war file name with SNAPSHOT version-->
+                    <!-- <argument>target/${project.name}-${project.version}.war</argument> -->  <!--append project an eand version together-->
+                   <!--  <argument>target/${project.build.finalName}.war</argument>  -->           <!-- automatically getting the output war file name with SNAPSHOT version-->
+
+                  <!--  </arguments>
+                </configuration>
+             </plugin>--> 
+      </plugins>
     </build>
 
 </project>
